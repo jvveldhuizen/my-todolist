@@ -13,59 +13,11 @@
                 "element": {"#": "main"}
             }
         },
-        "actionEventListener": {
-            "prototype": "montage/core/event/action-event-listener",
-            "properties": {
-                "action": "addContent",
-                "handler": {"@": "rangeController"}
-            },
-            "_dev": {
-                "isHidden": true
-            }
-        },
-        "button": {
-            "prototype": "digit/ui/button.reel",
-            "properties": {
-                "element": {"#": "button"},
-                "active": true,
-                "enabled": true,
-                "label": "New Task"
-            },
-            "listeners": [
-                {
-                    "type": "action",
-                    "listener": {"@": "actionEventListener"}
-                }
-            ]
-        },
-        "checkbox": {
-            "prototype": "digit/ui/checkbox.reel",
-            "properties": {
-                "element": {"#": "checkbox"},
-                "checked": true,
-                "enabled": true,
-                "value": "Do you want it?"
-            }
-        },
-        "list": {
-            "prototype": "digit/ui/list.reel",
-            "properties": {
-                "element": {"#": "list"},
-                "content": [],
-                "contentController": {"@": "rangeController"},
-                "isSelectionEnabled": false
-            }
-        },
-        "rangeController": {
-            "prototype": "montage/core/range-controller",
-            "properties": {
-                "content": []
-            }
-        },
         "title": {
             "prototype": "digit/ui/title.reel",
             "properties": {
-                "value": "My things to do"
+                "element": {"#": "title"},
+                "value": "My todo list"
             }
         }
     }
@@ -74,11 +26,6 @@
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
         <h1 data-montage-id="title"></h1>
-        <button data-montage-id="button"></button>
-        <ul data-montage-id="list">
-            <li></li>
-        </ul>
-        <input type="checkbox" data-montage-id="checkbox">
     </div>
 </body>
 </html>
