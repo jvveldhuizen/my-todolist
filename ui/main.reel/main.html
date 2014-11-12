@@ -38,11 +38,22 @@
                 }
             ]
         },
+        "checkbox": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "checkbox"},
+                "checked": true,
+                "enabled": true,
+                "value": "Do you want it?"
+            }
+        },
         "list": {
             "prototype": "digit/ui/list.reel",
             "properties": {
                 "element": {"#": "list"},
-                "contentController": {"@": "rangeController"}
+                "content": [],
+                "contentController": {"@": "rangeController"},
+                "isSelectionEnabled": false
             }
         },
         "rangeController": {
@@ -67,6 +78,7 @@
         <ul data-montage-id="list">
             <li></li>
         </ul>
+        <input type="checkbox" data-montage-id="checkbox">
     </div>
 </body>
 </html>
